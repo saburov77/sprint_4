@@ -9,6 +9,7 @@ import java.time.Duration;
 import java.util.Objects;
 
 public class OrderPage {
+    //Создать переменную вебдрайвера
     private WebDriver driver;
 
     //Локаторы формы "для кого самокат"
@@ -57,14 +58,20 @@ public class OrderPage {
 
     //Заполнить поля формы "Для кого самокат"
     public void spellingField(String name, String surname, String address, String metro, String phone) {
+        //Ввести имя
         driver.findElement(inputName).sendKeys(name);
+        //Ввести фамилию
         driver.findElement(inputSurname).sendKeys(surname);
+        //ВВести адрес
         driver.findElement(inputAddress).sendKeys(address);
+        //Ввести станцию метро
         driver.findElement(inputMetro).sendKeys(metro);
+        //Кликнуть по введенной станции метро в выпадающем списке
         driver.findElement(stationMetro).click();
+        //Ввести номер телефона
         driver.findElement(inputPhone).sendKeys(phone);
     }
-
+    //Кликнуть по кнопке "Далее"
     public void clickNextButton() {
         driver.findElement(nextButton).click();
     }
