@@ -79,7 +79,6 @@ public class OrderTest {
         //Выбрать цвет самоката
         objOrderPage.selectColor(color);
         //Кликнуть на кнопку "Заказать" ниже заполненной формы. При использовании кнопки "Заказать"
-        //сверху формы тест падает. Выявлен баг.
         objMainPage.clickOnMiddleOrderButton();
         //Кликнуть на кнопку "Да".
         objOrderPage.clickOnYesButton();
